@@ -361,6 +361,43 @@ header .right-part i {
     color: var(--ternary);
 }
 
+.go-top{
+    background-color: #00b725;
+    height: 3.5rem;
+    width: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 1.3rem;
+    right: 1.3rem;
+    border-radius: 50%;
+    border: 1px solid green;
+    cursor: pointer;
+    animation: upDown 3s ease-in-out infinite;
+    transition: background-color 0.3s ease;
+}
+
+.go-top:hover{
+    background-color: #00881b;
+}
+
+@keyframes upDown {
+    0% {
+      transform: translateY(0); /* Start at normal position */
+    }
+    50% {
+      transform: translateY(-25px); /* Move up by 10px */
+    }
+    100% {
+      transform: translateY(0); /* Move back to original position */
+    }
+  }
+
+.go-top i{
+    font-size: 1.5rem;
+    color: var(--light);
+}
 footer {
     background-color: var(--secondary);
     color: var(--darkText);
@@ -374,11 +411,12 @@ footer h1 {
 
 footer .socials-footer a {
     margin-left: 2rem;
-    transition: all 1s ease-in;
 }
-
+footer .socials-footer a img{
+    transition: transform 0.2s ease;
+}
 footer .socials-footer a img:hover {
-    transform: scale(1.05);
+    transform: translateY(-0.3rem);
 }
 
 footer .copyright {
