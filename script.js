@@ -11,12 +11,19 @@ close.addEventListener("click", () => {
     mobNav.classList.remove("open");
 });
 
-window.addEventListener("scroll", () => {
-    // console.log(window);
-    let scrollPosition = window.scrollY;
-    scrollPosition > 400 ? backToTop.style.display = "flex" : backToTop.style.display = "none";
-});
+
+
+function handleScroll() {
+  let scrollPosition = window.scrollY;
+  scrollPosition > 400 ? backToTop.style.display = "flex" : backToTop.style.display = "none";
+}
+
+// Check the scroll position when the page loads
+window.addEventListener("load", handleScroll);
+
+// Check the scroll position when the user scrolls
+window.addEventListener("scroll", handleScroll);
 
 backToTop.addEventListener("click", () => {
-    window.scrollTo({top: 0, behavior: "smooth"});
+  window.scrollTo({top: 0, behavior: "smooth"});
 });
