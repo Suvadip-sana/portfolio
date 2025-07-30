@@ -20,3 +20,13 @@ window.addEventListener("scroll", () => {
 backToTop.addEventListener("click", () => {
     window.scrollTo({top: 0, behavior: "smooth"});
 });
+
+
+
+const typed = new Typed('.multiple-text', {
+      strings: ['Software Engineer', 'Full Stack Developer'],
+      typeSpeed: 100,
+      backSpeed: 100,
+      backDelay: 1000,
+      loop: true
+    });
