@@ -4,11 +4,11 @@ let menuLogo = document.querySelector(".menuLogo");
 let backToTop = document.querySelector(".go-top");
 
 menuLogo.addEventListener("click", () => {
-    mobNav.classList.add("open");
+  mobNav.classList.add("open");
 });
 
 close.addEventListener("click", () => {
-    mobNav.classList.remove("open");
+  mobNav.classList.remove("open");
 });
 
 window.addEventListener("scroll", () => {
