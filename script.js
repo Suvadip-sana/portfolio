@@ -12,20 +12,22 @@ close.addEventListener("click", () => {
 });
 
 window.addEventListener("scroll", () => {
-    // console.log(window);
-    let scrollPosition = window.scrollY;
-    scrollPosition > 400 ? backToTop.style.display = "flex" : backToTop.style.display = "none";
+  // console.log(window);
+  let scrollPosition = window.scrollY;
+  scrollPosition > 400
+    ? (backToTop.style.display = "flex")
+    : (backToTop.style.display = "none");
 });
 
 backToTop.addEventListener("click", () => {
-    window.scrollTo({top: 0, behavior: "smooth"});
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
 // Dynamic typing
-const typed = new Typed('.multiple-text', {
-      strings: ['Software Engineer', 'Full Stack Developer'],
-      typeSpeed: 100,
-      backSpeed: 100,
-      backDelay: 1000,
-      loop: true
-    });
+const typed = new Typed(".multiple-text", {
+  strings: ["Software Engineer", "Full Stack Developer"],
+  typeSpeed: 100,
+  backSpeed: 100,
+  backDelay: 1000,
+  loop: true,
+});
